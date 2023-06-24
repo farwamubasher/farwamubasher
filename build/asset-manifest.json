@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.6ff3d4ea.css",
-    "main.js": "/static/js/main.48c3b382.js",
-    "static/js/787.21cfcf29.chunk.js": "/static/js/787.21cfcf29.chunk.js",
-    "static/media/bg.jpg": "/static/media/bg.f100e5ec11b4eb6bf10d.jpg",
-    "index.html": "/index.html",
-    "main.6ff3d4ea.css.map": "/static/css/main.6ff3d4ea.css.map",
-    "main.48c3b382.js.map": "/static/js/main.48c3b382.js.map",
-    "787.21cfcf29.chunk.js.map": "/static/js/787.21cfcf29.chunk.js.map"
+    "main.css": "/farwamubasher/static/css/main.50f8e052.css",
+    "main.js": "/farwamubasher/static/js/main.02433cd9.js",
+    "static/js/787.21cfcf29.chunk.js": "/farwamubasher/static/js/787.21cfcf29.chunk.js",
+    "static/media/bg.jpg": "/farwamubasher/static/media/bg.f100e5ec11b4eb6bf10d.jpg",
+    "index.html": "/farwamubasher/index.html",
+    "main.50f8e052.css.map": "/farwamubasher/static/css/main.50f8e052.css.map",
+    "main.02433cd9.js.map": "/farwamubasher/static/js/main.02433cd9.js.map",
+    "787.21cfcf29.chunk.js.map": "/farwamubasher/static/js/787.21cfcf29.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ff3d4ea.css",
-    "static/js/main.48c3b382.js"
+    "static/css/main.50f8e052.css",
+    "static/js/main.02433cd9.js"
   ]
 }
