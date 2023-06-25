@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Tab, Tabs, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import './App.css'; // Import the CSS file containing the styles
 import TabAbout from './TabAbout';
@@ -11,7 +11,8 @@ import TabProjects from './TabProjects';
 const App = () => {
   const [activeTab, setActiveTab] = useState(0);
 
-  const handleTabChange = (index) => {
+  const handleTabChange = (event) => {
+    const index = parseInt(event.target.value);
     setActiveTab(index);
   };
 
@@ -20,18 +21,16 @@ const App = () => {
       <div className="container">
         <h1 className="title">Farwa Mubasher</h1>
         <div className="sidebar">
-          <Tabs className="tabs" selectedIndex={activeTab} onSelect={handleTabChange}>
-            <TabList className="tab-list">
-              <Tab className="tab">About</Tab>
-              <Tab className="tab">Work Experience</Tab>
-              <Tab className="tab">Projects</Tab>
-              <Tab className="tab">Volunteer</Tab>
-              <Tab className="tab">Contact</Tab>
-            </TabList>
-          </Tabs>
+          <select className="dropdown" value={activeTab} onChange={handleTabChange}>
+            <option value={0}>About</option>
+            <option value={1}>Work Experience</option>
+            <option value={2}>Projects</option>
+            <option value={3}>Volunteer</option>
+            <option value={4}>Contact</option>
+          </select>
         </div>
         <div className="content">
-          <Tabs className="tabs" selectedIndex={activeTab} onSelect={handleTabChange}>
+          <Tabs selectedIndex={activeTab} onSelect={handleTabChange}>
             <TabPanel>
               <TabAbout />
             </TabPanel>
@@ -47,7 +46,6 @@ const App = () => {
             <TabPanel>
               <TabContact />
             </TabPanel>
-            
           </Tabs>
         </div>
         <footer>© 2023 My Personal Website. All rights reserved.</footer>

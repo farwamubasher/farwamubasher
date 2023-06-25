@@ -27,6 +27,9 @@ html {
   background-color: #9cb6ba;
   border-radius: 5px;
   margin: 0 auto;
+  position: relative; /* Add this line to make the container relative */
+  overflow-y: auto; /* Add this line to enable scrolling within the container */
+  height: calc(100% - 120px); /* Adjust the height to leave space for the dropdown */
 }
 
 h1 {
@@ -47,6 +50,10 @@ h1 {
   justify-content: center;
   margin-bottom: 20px;
   flex-wrap: wrap;
+  position: sticky; /* Add this line to make the tab list sticky */
+  top: 0; /* Add this line to position the tab list at the top */
+  z-index: 1; /* Add this line to ensure the tab list appears above the content */
+  background-color: #9cb6ba; /* Add this line to match the container background color */
 }
 
 .tab {
@@ -77,6 +84,22 @@ footer {
   background-color: #f0f0f0;
   border-radius: 5px;
   margin-top: 20px;
+}
+
+/* Dropdown Styles */
+
+.dropdown {
+  width: 100%; /* Set the dropdown width to 100% */
+  padding: 10px;
+  background-color: #3ca5ce;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.dropdown option {
+  background-color: #9cb6ba; /* Match the dropdown background color with the container */
 }
 
 /* Mobile Styles */
