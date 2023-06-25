@@ -7,13 +7,13 @@ const TabWorkExperience = () => {
       <div className="experience">
         <h3>Network Intern</h3>
         <p>Bell · Internship</p>
-        <p>May 2023 - Present · 2 mos</p>
+        <p>May 2023 - Present</p>
         <p>Mississauga, Ontario, Canada · Hybrid</p>
       </div>
       <div className="experience">
         <h3>Leadership Development Assistant</h3>
         <p>Leadership Lab · Contract Part-time</p>
-        <p>Sep 2022 - Apr 2023 · 8 mos</p>
+        <p>Sep 2022 - Apr 2023</p>
         <p>Toronto, Ontario, Canada</p>
         <ul>
           <li>Support planning of 2023 CanStudyUS program through promotion to community organization and education institutions across Canada</li>
@@ -27,7 +27,7 @@ const TabWorkExperience = () => {
       <div className="experience">
         <h3>Student Intern</h3>
         <p>Celestica · Internship</p>
-        <p>May 2021 - Aug 2022 · 1 yr 4 mos</p>
+        <p>May 2021 - Aug 2022</p>
         <p>Toronto, Ontario, Canada</p>
         <ul>
           <li>Created relational database models and dashboards in Microsoft Power BI with the use of DAX and M Query programming languages as well as Oracle SQL Query</li>
@@ -38,6 +38,31 @@ const TabWorkExperience = () => {
           <li>Mapping process flows</li>
           <li>Setup and monitor automated data feeds into hubs of historical data</li>
           <li>Manage client and stakeholder relationships</li>
+        </ul>
+      </div>
+
+      {/* New Work Experience */}
+      <div className="experience">
+        <h3>Ryerson University Career & Co-op Centre</h3>
+        <p>Co-op Program Assistant</p>
+        <p>May 2020 - Apr 2021</p>
+        <p>Toronto, Ontario, Canada</p>
+        <ul>
+          <li>Collaborated with students and employers to book site visits through Doodle and Google Calendar and email</li>
+          <li>Gathered information on COVID impact on Co-op Students.</li>
+          <li>Supported the development of content for Co-op prep courses through the creation of PowerPoint as well as other required material.</li>
+          <li>Support professional staff with research, coordination data collection, and administration duties, including posting co-op jobs, updating student records, preparing statistical reports and researching work opportunities and labour market trends</li>
+        </ul>
+      </div>
+      <div className="experience">
+        <h3>Ryerson University Career & Co-op Centre</h3>
+        <p>Campus Engagement Ambassador</p>
+        <p>Sep 2019 - May 2020 </p>
+        <p>Toronto, Ontario, Canada</p>
+        <ul>
+          <li>Contacted professors through professional emails to schedule class presentations</li>
+          <li>Interacted with over 100 students to promote the career center to increase student involvement in events and ensure students are career-ready upon graduation</li>
+          <li>Marketed the career and co-op center through Facebook promotions and emails to the student body, ensuring increased numbers in events</li>
         </ul>
       </div>
     </div>
