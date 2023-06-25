@@ -65,6 +65,18 @@ const TabWorkExperience = () => {
           <li>Marketed the career and co-op center through Facebook promotions and emails to the student body, ensuring increased numbers in events</li>
         </ul>
       </div>
+      <div className="experience">
+        <h3>Walmart</h3>
+        <p>Cashier</p>
+        <p>Dec 2017 - Jun 2018 </p>
+        <p>Toronto, Ontario, Canada</p>
+        <ul>
+          <li>Assumed a part-time position to strengthen my communication skills and gain customer service experience</li>
+          <li>Assisted customers to find products, check prices, and checkout items at register</li>
+          <li>Handled money and learned how to operate the cash registers</li>
+          <li>Completed Customer Service Training</li>
+        </ul>
+      </div>
     </div>
   );
 };
