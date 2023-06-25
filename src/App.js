@@ -6,6 +6,7 @@ import TabAbout from './TabAbout';
 import TabWorkExperience from './TabWorkExperience';
 import TabVolunteer from './TabVolunteer';
 import TabContact from './TabContact';
+import TabProjects from './TabProjects';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -23,6 +24,7 @@ const App = () => {
             <TabList className="tab-list">
               <Tab className="tab">About</Tab>
               <Tab className="tab">Work Experience</Tab>
+              <Tab className="tab">Projects</Tab>
               <Tab className="tab">Volunteer</Tab>
               <Tab className="tab">Contact</Tab>
             </TabList>
@@ -37,11 +39,15 @@ const App = () => {
               <TabWorkExperience />
             </TabPanel>
             <TabPanel>
+              <TabProjects />
+            </TabPanel>
+            <TabPanel>
               <TabVolunteer />
             </TabPanel>
             <TabPanel>
               <TabContact />
             </TabPanel>
+            
           </Tabs>
         </div>
         <footer>© 2023 My Personal Website. All rights reserved.</footer>
