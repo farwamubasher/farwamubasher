@@ -34,6 +34,19 @@ const TabVolunteer = () => {
         <p>Toronto, Ontario, Canada</p>
         <p>In this role, I engaged in continuous research in an effort to identify new and potential sponsors or partners. I cultivated and maintained relationships with sponsors and potential partners to ensure continued support. Additionally, I created the sponsorship package for the conference.</p>
       </div>
+      <div className="experience">
+        <h3>Volunteer Action Team Member</h3>
+        <p>Volunteer Action Centre Waterloo Region</p>
+        <p>Oct 2016 - Jan 2018 · 1 yr 4 mos</p>
+        <p>Human Rights</p>
+        <ul>
+          <li>Accountable team member with regular attendance</li>
+          <li>Completed micro-volunteer projects for the Centre in a timely and efficient manner</li>
+          <li>Represented the Centre as a positive youth ambassador during group volunteering weeks</li>
+          <li>Planned and executed Community Action Projects</li>
+          <li>Designed content for the website and created PowerPoints</li>
+        </ul>
+      </div>
     </div>
   );
 };
