@@ -1,6 +1,7 @@
 /* General Styles */
 
-body, html {
+body,
+html {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -9,6 +10,7 @@ body, html {
   background-size: cover;
   background-position: center;
   font-family: "Times New Roman", Times, serif;
+  box-sizing: border-box;
 }
 
 .app {
@@ -25,7 +27,6 @@ body, html {
   background-color: #9cb6ba;
   border-radius: 5px;
   margin: 0 auto;
-  box-sizing: border-box;
 }
 
 h1 {
@@ -81,16 +82,8 @@ footer {
 /* Mobile Styles */
 
 @media (max-width: 768px) {
-  .title {
-    font-size: 30px;
-  }
-  
   .container {
     padding: 10px;
-  }
-  
-  .tab {
-    padding: 8px 16px;
-    font-size: 14px;
+    margin: 0;
   }
 }
