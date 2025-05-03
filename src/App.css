@@ -59,6 +59,16 @@ section {
   color: #0056b3;
   transform: translateY(-1px);
 }
+.page-banner {
+  background-color: #fefefe;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
 /* Main content */
 .content {
@@ -91,6 +101,13 @@ section {
 .react-tabs__tab-panel {
   min-height: 400px;
 }
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
 /* Footer */
 footer {
   text-align: center;

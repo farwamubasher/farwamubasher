@@ -27,7 +27,9 @@ const App = () => {
           <button onClick={() => scrollToSection('contact')}>Contact</button>
         </nav>
       </header>
-
+      <div className="page-banner">
+        <h2>Farwa Mubasher Website</h2>
+      </div>
       <main className="content">
         <section id="about"><TabAbout /></section>
         <section id="experience"><TabWorkExperience /></section>

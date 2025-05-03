@@ -1,0 +1,15 @@
+.contact-container {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .contact-links a {
+    margin: 0 1rem;
+    color: #181919;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-links a:hover {
+    color: #00bfa5;
+  }
+  
