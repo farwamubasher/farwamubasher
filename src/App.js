@@ -16,8 +16,9 @@ const App = () => {
 
   return (
     <div className="app">
+      
       <header className="navbar">
-        <h1 className="title">Farwa Mubasher</h1>
+        <h1 className="title">Farwa Mubashe Professional Website</h1>
         <nav>
           <button onClick={() => scrollToSection('about')}>About</button>
           <button onClick={() => scrollToSection('experience')}>Experience</button>
