@@ -1,112 +1,87 @@
-/* General Styles */
-
-body,
-html {
-  height: 100%;
-  width: 100%;
+/* Reset and base */
+body, html {
   margin: 0;
   padding: 0;
-  background-image: url('../public/images/bg.jpg');
-  background-size: cover;
-  background-position: center;
-  font-family: "Times New Roman", Times, serif;
-  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #141515, #64696c);
+  color: #333;
+  scroll-behavior: smooth;
 }
 
+h1, h2, h3 {
+  margin: 0.5em 0;
+}
+
+/* App container */
 .app {
-  height: 100%;
   display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Sticky top navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffffd9; /* slight transparency */
+  padding: 1rem 2rem;
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.container {
-  max-width: 800px;
-  width: 90%;
-  padding: 20px;
-  background-color: #9cb6ba;
-  border-radius: 5px;
-  margin: 0 auto;
-  position: relative; /* Add this line to make the container relative */
-  overflow-y: auto; /* Add this line to enable scrolling within the container */
-  height: calc(100% - 120px); /* Adjust the height to leave space for the dropdown */
+.navbar h1 {
+  font-size: 1.8rem;
+  color: #1a1a1a;
 }
 
-h1 {
-  text-align: center;
-}
-
-.title {
-  font-size: 60px;
-  text-align: center;
-}
-
-.tabs {
-  width: 100%;
-}
-
-.tab-list {
+.navbar nav {
   display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-  position: sticky; /* Add this line to make the tab list sticky */
-  top: 0; /* Add this line to position the tab list at the top */
-  z-index: 1; /* Add this line to ensure the tab list appears above the content */
-  background-color: #9cb6ba; /* Add this line to match the container background color */
+  gap: 1rem;
 }
 
-.tab {
-  padding: 10px 20px;
-  background-color: #3ca5ce;
-  border-radius: 5px;
+.navbar button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin: 5px;
+  transition: color 0.3s, transform 0.2s;
 }
 
-.tab:hover {
-  background-color: #145875;
+.navbar button:hover {
+  color: #0056b3;
+  transform: translateY(-1px);
 }
 
-.tab-list .react-tabs__tab--selected {
-  background-color: #164890;
-  color: #fff;
+/* Main content */
+.content {
+  padding: 2rem 4rem;
+  flex: 1;
 }
 
-.tab-panel {
-  margin-top: 20px;
+.content section {
+  margin-bottom: 4rem;
+  padding: 2rem;
+  background: #bfc7c7;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
 
+/* Footer */
 footer {
   text-align: center;
-  padding: 20px;
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  margin-top: 20px;
-}
-
-/* Dropdown Styles */
-
-.dropdown {
-  width: 100%; /* Set the dropdown width to 100% */
-  padding: 10px;
-  background-color: #3ca5ce;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.dropdown option {
-  background-color: #9cb6ba; /* Match the dropdown background color with the container */
-}
-
-/* Mobile Styles */
-
-@media (max-width: 768px) {
-  .container {
-    padding: 10px;
-    margin: 0;
-  }
+  padding: 1rem;
+  background-color: #f0f2f5;
+  color: #666;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
 }
