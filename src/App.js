@@ -3,9 +3,8 @@ import './App.css';
 import TabAbout from './Components/TabAbout';
 import TabWorkExperience from './Components/TabWorkExperience';
 import TabVolunteer from './Components/TabVolunteer';
-import TabProjects from './Components/TabProjects';
 import TabContact from './Components/TabContact';
-
+import TabProjects from './Components/TabProjects';
 
 const App = () => {
   const scrollToSection = (id) => {
