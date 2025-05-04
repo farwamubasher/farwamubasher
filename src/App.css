@@ -71,7 +71,7 @@ section {
 }
 
 .nav-links li a {
-  color: rgb(7, 7, 7);
+  color: rgb(249, 246, 246);
   text-decoration: none;
   font-weight: 500;
 }
@@ -80,10 +80,10 @@ section {
 /* Hamburger menu styles */
 .hamburger {
   display: none;
+  background-color: #333;
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
-  color: black;
 }
 
 .bar {
@@ -99,6 +99,7 @@ section {
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
+    background-color: #333;
   }
   .navbar-container {
     flex-direction: column;
@@ -126,7 +127,7 @@ section {
   }
 
   .nav-links li a {
-    color: #000; /* Ensure it's black or another visible color */
+    color: #f6f5f5; /* Ensure it's black or another visible color */
   }
 }
 
