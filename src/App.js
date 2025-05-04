@@ -16,21 +16,27 @@ const App = () => {
 
   return (
     <div className="app">
-      
-      <header className="navbar">
-        <h1 className="title">Farwa Mubashe Professional Website</h1>
-        <nav>
-          <button onClick={() => scrollToSection('about')}>About</button>
-          <button onClick={() => scrollToSection('experience')}>Experience</button>
-          <button onClick={() => scrollToSection('projects')}>Projects</button>
-          <button onClick={() => scrollToSection('volunteer')}>Volunteer</button>
-          <button onClick={() => scrollToSection('contact')}>Contact</button>
-        </nav>
+      <header>
+        <nav className="navbar">
+        <div className="navbar-container">
+          <div className="logo">Farwa Mubasher</div>
+          <ul className="nav-links">
+            {/* Navigation links */}
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#volunteer">Volunteer</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
       </header>
       <div className="page-banner">
-        <h2>Farwa Mubasher Website</h2>
+        {/* Page banner 
+        <h2>Farwa Mubasher Website</h2>*/}
       </div>
       <main className="content">
+        {/* Main content sections */}
         <section id="about"><TabAbout /></section>
         <section id="experience"><TabWorkExperience /></section>
         <section id="projects"><TabProjects /></section>
@@ -38,7 +44,10 @@ const App = () => {
         <section id="contact"><TabContact /></section>
       </main>
 
-      <footer>© 2025 Farwa Mubasher. All rights reserved.</footer>
+      <footer>
+        {/* Footer */}
+        © 2025 Farwa Mubasher. All rights reserved.
+      </footer>
     </div>
   );
 };
