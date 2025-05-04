@@ -76,18 +76,53 @@ section {
   font-weight: 500;
 }
 
-/* Responsive layout: stack vertically on small screens */
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: 0.3s;
+}
+
+
+
+/* Responsive styles */
 @media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
   .navbar-container {
     flex-direction: column;
     align-items: flex-start;
   }
 
+
   .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
+    background: #fff;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 15px 0;
+    text-align: center;
   }
 }
 

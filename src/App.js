@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import TabAbout from './Components/TabAbout';
 import TabWorkExperience from './Components/TabWorkExperience';
@@ -7,10 +7,16 @@ import TabContact from './Components/TabContact';
 import TabProjects from './Components/TabProjects';
 
 const App = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
+
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
+      closeMenu();
     }
   };
 
@@ -18,25 +24,27 @@ const App = () => {
     <div className="app">
       <header>
         <nav className="navbar">
-        <div className="navbar-container">
-          <div className="logo">Farwa Mubasher</div>
-          <ul className="nav-links">
-            {/* Navigation links */}
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#volunteer">Volunteer</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
+          <div className="navbar-container">
+            <div className="logo">Farwa Mubasher</div>
+            <div className="hamburger" onClick={toggleMenu}>
+              <span className="bar"></span>
+              <span className="bar"></span>
+              <span className="bar"></span>
+            </div>
+            <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+              <li><a onClick={() => scrollToSection('about')}>About</a></li>
+              <li><a onClick={() => scrollToSection('experience')}>Experience</a></li>
+              <li><a onClick={() => scrollToSection('projects')}>Projects</a></li>
+              <li><a onClick={() => scrollToSection('volunteer')}>Volunteer</a></li>
+              <li><a onClick={() => scrollToSection('contact')}>Contact</a></li>
+            </ul>
+          </div>
+        </nav>
       </header>
-      <div className="page-banner">
-        {/* Page banner 
-        <h2>Farwa Mubasher Website</h2>*/}
-      </div>
+
+      <div className="page-banner"></div>
+
       <main className="content">
-        {/* Main content sections */}
         <section id="about"><TabAbout /></section>
         <section id="experience"><TabWorkExperience /></section>
         <section id="projects"><TabProjects /></section>
@@ -45,7 +53,6 @@ const App = () => {
       </main>
 
       <footer>
-        {/* Footer */}
         © 2025 Farwa Mubasher Professional Portfolio. All rights reserved.
       </footer>
     </div>
