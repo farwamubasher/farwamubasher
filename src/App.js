@@ -46,7 +46,7 @@ const App = () => {
 
       <footer>
         {/* Footer */}
-        © 2025 Farwa Mubasher. All rights reserved.
+        © 2025 Farwa Mubasher Professional Portfolio. All rights reserved.
       </footer>
     </div>
   );

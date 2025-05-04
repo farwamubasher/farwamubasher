@@ -11,15 +11,18 @@ body, html {
 h1, h2, h3 {
   margin: 0.5em 0;
 }
+
 section {
   scroll-margin-top: 100px; /* offset for fixed navbar */
 }
+
 /* App container */
 .app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
 .container {
   display: flex;
   flex-direction: column; /* Stack vertically by default */
@@ -44,7 +47,6 @@ section {
   width: 100%; /* Ensure navbar takes full width */
   z-index: 1000;
   box-sizing: border-box;  /* Include padding and border in the element’s total width and height */
-
 }
 
 .navbar-container {
@@ -89,16 +91,18 @@ section {
   }
 }
 
+/* Page Banner */
 .page-banner {
   background-color: #fefefe;
   padding: 1rem 2rem;
-  padding-top: 80px;
+  padding-top: 80px; /* Space for the fixed navbar */
   text-align: center;
   font-size: 1.5rem;
   font-weight: 600;
   color: #333;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-top: 60px; /* Ensures content is pushed below the navbar */
 }
 
 /* Main content */
@@ -106,18 +110,22 @@ section {
   padding: 2rem 4rem;
   flex: 1;
   overflow-y: auto;
-  max-height: calc(100vh - 160px); /* adjust based on navbar/banner height */
+  max-height: calc(100vh - 160px); /* Adjust based on navbar/banner height */
+  margin-top: 60px; /* Prevents overlap with fixed navbar */
 }
+
 .content h1 {
   font-size: 2.5rem;
   color: #1a1a1a;
   margin-bottom: 1rem;
 }
+
 .content h2 {
   font-size: 1.5rem;
   color: #1a1a1a;
   margin-bottom: 1rem;
 }
+
 .content section {
   margin-bottom: 4rem;
   padding: 2rem;
@@ -128,10 +136,13 @@ section {
   margin-left: auto;
   margin-right: auto;
   text-align: left;
+  scroll-margin-top: 80px;  /* Ensures proper scroll positioning */
 }
+
 .react-tabs__tab-panel {
   min-height: 400px;
 }
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
