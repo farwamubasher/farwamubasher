@@ -20,6 +20,18 @@ section {
   flex-direction: column;
   min-height: 100vh;
 }
+.container {
+  display: flex;
+  flex-direction: column; /* Stack vertically by default */
+  padding: 1rem;
+}
+
+/* Switch to row layout on tablets and desktops */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+}
 
 /* Sticky top navbar */
 .navbar {
