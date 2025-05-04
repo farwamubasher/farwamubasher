@@ -191,10 +191,16 @@ section {
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #f0f2f5;
-  color: #666;
-  font-size: 0.9rem;
-  border-top: 1px solid #ddd;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
+
+/* This class is applied when the footer scrolls into view */
+footer:has(h2:in-viewport), 
+footer:has(p:in-viewport), 
+footer:has(span:in-viewport) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
