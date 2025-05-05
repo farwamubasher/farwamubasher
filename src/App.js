@@ -5,6 +5,7 @@ import TabWorkExperience from './Components/TabWorkExperience';
 import TabVolunteer from './Components/TabVolunteer';
 import TabContact from './Components/TabContact';
 import TabProjects from './Components/TabProjects';
+import Education  from './Components/Education';
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,6 +37,7 @@ const App = () => {
               <li><a onClick={() => scrollToSection('experience')}>Experience</a></li>
               <li><a onClick={() => scrollToSection('projects')}>Projects</a></li>
               <li><a onClick={() => scrollToSection('volunteer')}>Volunteer</a></li>
+              <li><a onClick={() => scrollToSection('education')}>Education</a></li>
               <li><a onClick={() => scrollToSection('contact')}>Contact</a></li>
             </ul>
           </div>
@@ -49,6 +51,7 @@ const App = () => {
         <section id="experience"><TabWorkExperience /></section>
         <section id="projects"><TabProjects /></section>
         <section id="volunteer"><TabVolunteer /></section>
+        <section id="education"><Education /></section>
         <section id="contact"><TabContact /></section>
       </main>
 
