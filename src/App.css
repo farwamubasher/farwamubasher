@@ -4,7 +4,7 @@ body, html {
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to right, #242526, #585a5c);
-  color: #333;
+  color: #f1f1f1;
   scroll-behavior: smooth;
 }
 
@@ -13,7 +13,7 @@ h1, h2, h3 {
 }
 
 section {
-  scroll-margin-top: 100px; /* offset for fixed navbar */
+  scroll-margin-top: 100px;
 }
 
 /* App container */
@@ -25,11 +25,10 @@ section {
 
 .container {
   display: flex;
-  flex-direction: column; /* Stack vertically by default */
+  flex-direction: column;
   padding: 1rem;
 }
 
-/* Switch to row layout on tablets and desktops */
 @media (min-width: 768px) {
   .container {
     flex-direction: row;
@@ -43,18 +42,18 @@ section {
   color: white;
   position: fixed;
   top: 0;
-  left: 0; /* Ensure it starts at the very left */
-  width: 100%; /* Ensure navbar takes full width */
+  left: 0;
+  width: 100%;
   z-index: 1000;
-  box-sizing: border-box;  /* Include padding and border in the element’s total width and height */
+  box-sizing: border-box;
 }
 
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%; /* Ensure container takes full width */
-  max-width: 100%; /* Prevents container from being restricted */
+  width: 100%;
+  max-width: 100%;
 }
 
 .logo {
@@ -76,7 +75,6 @@ section {
   font-weight: 500;
 }
 
-
 /* Hamburger menu styles */
 .hamburger {
   display: none;
@@ -93,19 +91,16 @@ section {
   transition: 0.3s;
 }
 
-
-
 /* Responsive styles */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
-    background-color: #333;
   }
+
   .navbar-container {
     flex-direction: column;
     align-items: flex-start;
   }
-
 
   .nav-links {
     position: absolute;
@@ -114,7 +109,7 @@ section {
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
-    background: #fff;
+    background: #333;
     display: none;
   }
 
@@ -122,61 +117,54 @@ section {
     display: flex;
   }
 
-  .nav-links {
-    background: #aca9a9; /* Light background for contrast */
-  }
-
   .nav-links li a {
-    color: #f6f5f5; /* Ensure it's black or another visible color */
+    color: #f6f5f5;
   }
 }
 
 /* Page Banner */
 .page-banner {
-  background-color: #fefefe;
-  padding: 1rem 2rem;
-  padding-top: 80px; /* Space for the fixed navbar */
+  background: none;
+  padding: 2rem 0 1rem 0;
   text-align: center;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #333;
-  border-bottom: 1px solid #ddd;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  margin-top: 60px; /* Ensures content is pushed below the navbar */
+  color: #f1f1f1;
+  margin-top: 60px;
 }
 
 /* Main content */
 .content {
-  padding: 2rem 4rem;
+  padding: 2rem 1rem;
   flex: 1;
   overflow-y: auto;
-  max-height: calc(100vh - 160px); /* Adjust based on navbar/banner height */
-  margin-top: 60px; /* Prevents overlap with fixed navbar */
+  max-height: calc(100vh - 160px);
+  margin-top: 60px;
 }
 
 .content h1 {
   font-size: 2.5rem;
-  color: #1a1a1a;
+  color: #f1f1f1;
   margin-bottom: 1rem;
 }
 
 .content h2 {
   font-size: 1.5rem;
-  color: #1a1a1a;
+  color: #f1f1f1;
   margin-bottom: 1rem;
 }
 
 .content section {
   margin-bottom: 4rem;
-  padding: 2rem;
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
-  scroll-margin-top: 80px;  /* Ensures proper scroll positioning */
+  scroll-margin-top: 80px;
 }
 
 .react-tabs__tab-panel {
@@ -197,11 +185,9 @@ footer {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* This class is applied when the footer scrolls into view */
-footer:has(h2:in-viewport), 
-footer:has(p:in-viewport), 
+footer:has(h2:in-viewport),
+footer:has(p:in-viewport),
 footer:has(span:in-viewport) {
   opacity: 1;
   transform: translateY(0);
 }
-
